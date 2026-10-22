@@ -218,3 +218,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# YOLO training outputs
+runs/
+
+# Local datasets
+ultralytics_dataset/
+obj_train_data/
+
+# Python virtual environments
+.venv/
+venv/
