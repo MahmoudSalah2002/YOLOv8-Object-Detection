@@ -110,3 +110,22 @@ python train.py
 Training results and model weights will be saved in the `runs/detect` directory.
 
 The best-performing weights are saved as `best.pt`.
+
+
+## Live Webcam Detection
+
+Run real-time object detection using your webcam:
+
+```bash
+yolo predict model=weights/best.pt source=0
+```
+
+Press `q` to stop the webcam prediction window.
+
+## Project Highlights
+
+- Custom-trained YOLOv8 model for cat and dog detection.
+- Image-based object detection with confidence scores.
+- Real-time webcam detection.
+- Training metrics and evaluation visualizations.
+
