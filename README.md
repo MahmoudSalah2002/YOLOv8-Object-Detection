@@ -39,10 +39,10 @@ Training evaluation plots and confusion matrices are available in the [results](
 
 ## Detection Examples
 
-### Cat Detection
+### Dog Detection
 ![Cat Detection](examples/images.jpg)
 
-### Dog Detection
+### Cat Detection
 ![Dog Detection](examples/download.jpg)
 
 View more details in the [examples folder](examples/).
