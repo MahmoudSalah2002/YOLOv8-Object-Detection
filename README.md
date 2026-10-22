@@ -60,7 +60,7 @@ pip install -r requirements.txt
 To run object detection, use the trained YOLOv8 model with an image:
 
 ```bash
-yolo detect predict model=path/to/best.pt source=path/to/image.jpg
+yolo detect predict model=weights/best.pt source=path/to/image.jpg
 ```
 
 Replace `path/to/best.pt` with the location of your trained model weights, and `path/to/image.jpg` with the image you want to test.
