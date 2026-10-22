@@ -1,23 +1,34 @@
 
-from ultralytics import YOLO
 from pathlib import Path
+from ultralytics import YOLO
 
-# Path to the prepared dataset configuration
-DATA_YAML = Path(
-    r"D:\Downloads\cat_dog_dataset\ultralytics_dataset\data.yaml"
-)
+# Project paths
+PROJECT_DIR = Path(__file__).resolve().parent
+DATA_YAML = PROJECT_DIR / "ultralytics_dataset" / "data.yaml"
 
-# Load a pretrained YOLOv8 model
-model = YOLO("yolov8n.pt")
+# Pretrained YOLOv8 model
+MODEL_NAME = "yolov8n.pt"
 
-# Train the model
-if __name__ == "__main__":
+
+def main():
+    if not DATA_YAML.exists():
+        raise FileNotFoundError(
+            f"Dataset configuration not found: {DATA_YAML}\n"
+            "Please prepare the dataset first using prepare_dataset.py."
+        )
+
+    model = YOLO(MODEL_NAME)
+
     model.train(
         data=str(DATA_YAML),
         epochs=50,
         imgsz=640,
         batch=8,
-        project="runs/detect",
+        project=str(PROJECT_DIR / "runs" / "detect"),
         name="cat_dog_training",
-        exist_ok=True
+        exist_ok=True,
     )
+
+
+if __name__ == "__main__":
+    main()
