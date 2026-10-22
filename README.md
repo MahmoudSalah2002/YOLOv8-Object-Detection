@@ -79,3 +79,34 @@ Replace `path/to/best.pt` with the location of your trained model weights, and `
 
 - Cat
 - Dog
+
+## Training the Model
+
+The model was trained using YOLOv8n with the following settings:
+
+- **Epochs:** 50
+- **Image Size:** 640 × 640
+- **Batch Size:** 8
+- **Classes:** Cat and Dog
+
+### Prepare the Dataset
+
+Run the dataset preparation script:
+
+```bash
+python prepare_dataset.py
+```
+
+Make sure the dataset is available and the generated `data.yaml` file is in the expected location.
+
+### Start Training
+
+Run the training script:
+
+```bash
+python train.py
+```
+
+Training results and model weights will be saved in the `runs/detect` directory.
+
+The best-performing weights are saved as `best.pt`.
