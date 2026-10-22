@@ -37,6 +37,16 @@ Training evaluation plots and confusion matrices are available in the [results](
 #### Precision-Recall Curve
 ![Precision-Recall Curve](results/BoxPR_curve.png)
 
+## Detection Examples
+
+### Cat Detection
+![Cat Detection](examples/images.jpg)
+
+### Dog Detection
+![Dog Detection](examples/download.jpg)
+
+View more details in the [examples folder](examples/).
+
 ## Author
 Mahmoud Elbalat
 
