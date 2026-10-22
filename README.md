@@ -39,3 +39,33 @@ Training evaluation plots and confusion matrices are available in the [results](
 
 ## Author
 Mahmoud Elbalat
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/MahmoudSalah2002/YOLOv8-Object-Detection.git
+cd YOLOv8-Object-Detection
+```
+
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+To run object detection, use the trained YOLOv8 model with an image:
+
+```bash
+yolo detect predict model=path/to/best.pt source=path/to/image.jpg
+```
+
+Replace `path/to/best.pt` with the location of your trained model weights, and `path/to/image.jpg` with the image you want to test.
+
+## Supported Classes
+
+- Cat
+- Dog
